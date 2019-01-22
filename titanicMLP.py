@@ -9,8 +9,8 @@ from sklearn.preprocessing import StandardScaler
 
 df = pd.read_csv('./titanic_latest.csv').fillna(1e6).astype(np.float64)
 
-y = df['survived']
-x = df.drop(['survived'], axis=1)
+y = df['survival']
+x = df.drop(['survival'], axis=1)
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.7, test_size=0.3, random_state=27)
 print(y_test)
